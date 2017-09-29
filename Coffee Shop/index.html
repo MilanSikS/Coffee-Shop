@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	    <meta charset="UTF-8"> 
+        <title>Coffee</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    
+		
+		<style type="text/css">
+		    body {
+			 background-image:url(images.jpg); 
+             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubinti", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+             font-size: 112,5%;
+             margin-left: auto;
+             margin-right: auto;
+             max-width: 40em;
+             width: 88%;
+			 }
+			
+			.accordion {
+			   display: none;
+			}
+			.accordion.active {
+			    display: block;
+			}
+            
+			</style>
+    </head>
+    <body>
+        <h1>COFFEE SHOP</h1>
+        
+        <p><a class="accordion-toggle" href="#content-1">Coffee Plaza</a></p>
+        <div class="accordion" id="content-1">
+            <h2><a href="coffee-plaza.html">Coffee Plaza-more</a></h2>
+			<img src="slike/1.jpg" alt="Coffee Plaza"></p>
+            <p>Distance 150m</p>
+			
+        </div>
+        
+        <p><a class="accordion-toggle" href="#content-2">Coffee Brod</a></p>
+        <div class="accordion" id="content-2">
+            <h2><a href="coffee-brod.html">Coffee Brod-more</a></h2>
+			<img src="slike/2.jpg" alt="Coffee Brod"></p>
+            <p>Distance 180m</p>
+        </div>
+        
+        <p><a class="accordion-toggle" href="#content-3">Coffee Hedonist</a></p>
+        <div class="accordion" id="content-3">
+             <h2><a href="coffee-hedonist.html">Coffee Hedonist-more</a></h2>
+			<img src="slike/3.jpg" alt="Coffee Hedonist"></p>
+            <p>Distance 250m</p>
+        </div>
+		
+		<p><a class="accordion-toggle" href="#content-4">Coffee India</a></p>
+        <div class="accordion" id="content-4">
+            <h2><a href="coffee-india.html">Coffee India-more</a></h2>
+			<img src="slike/4.jpg" alt="Coffee India"></p>
+            <p>Distance 350m</p>
+        </div>
+		
+		<p><a class="accordion-toggle" href="#content-5">Coffee Lux</a></p>
+        <div class="accordion" id="content-5">
+            <h2><a href="coffee-lux.html">Coffee Lux-more</a></h2>
+			<img src="slike/5.jpg" alt="Coffee Lux"></p>
+            <p>Distance 400m</p>
+        </div>
+		
+		<p><a class="accordion-toggle" href="#content-6">Coffee Pleasure</a></p>
+        <div class="accordion" id="content-6">
+            <h2><a href="coffee-pleasure.html">Coffee Pleasure-more</a></h2>
+			<img src="slike/6.jpg" alt="Coffee Pleasure"></p>
+            <p>Distance 600m</p>
+        </div>
+		
+		<p><a class="accordion-toggle" href="#content-7">Coffee Relax</a></p>
+        <div class="accordion" id="content-7">
+             <h2><a href="coffee-pleasure.html">Coffee Pleasure-more</a></h2>
+			<img src="slike/7.jpg" alt="Coffee Relax"></p>
+            <p>Distance 700m</p>
+        </div>
+		
+		<p><a class="accordion-toggle" href="#content-8">Coffee Sokace</a></p>
+        <div class="accordion" id="content-8">
+             <h2><a href="coffee-sokace.html">Coffe Sokace-more</a></h2>
+			<img src="slike/8.jpg" alt="Coffee Sokace"></p>
+            <p>Distance 900m</p>
+        </div>
+		
+		<p><a class="accordion-toggle" href="#content-9">Coffee Y</a></p>
+        <div class="accordion" id="content-9">
+            <h2><a href="coffee-y.html">Coffe Y-more</a></h2>
+			<img src="slike/9.jpg" alt="Coffee Sokace"></p>
+            <p>Distance 950m</p>
+        </div>
+		
+		<p><a class="accordion-toggle" href="#content-10">Coffee Tvrdjava</a></p>
+        <div class="accordion" id="content-10">
+             <h2><a href="coffee-tvrdjava.html">Coffe Tvrdjava-more</a></h2>
+			<img src="slike/10.jpg" alt="Coffee Tvrajava"></p>
+            <p>Distance 1000m</p>
+			
+			<script>
+			confirm ("Ukljucite geo Lokaciju");
+           </script>
+		   
+		  <script>
+            document.addEventListener('click', function (event) {
+			
+			   if ( !event.target.classList.contains('accordion-toggle') ) return; 
+			   
+			   var content = document.querySelector(event.target.hash);
+			   if ( !content ) return;
+			   
+			   event.preventDefault();
+			   
+			   if ( content.classList.contains('active') ) {
+			   content.calssList.remove('active');
+			   return;
+			   }
+			   
+			   var accordions = document.querySelectorAll('.accordion');
+			   for (var i = 0; i <  accordions.length; i++){
+			      accordions[i].classList.remove('active');
+			   }
+			   content.classList.add('active');
+			   
+		    	}, false);
+               
+           </script>  
+    </body>
+</html>

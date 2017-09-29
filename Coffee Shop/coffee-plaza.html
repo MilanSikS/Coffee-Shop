@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Coffee Plaza</title>
+
+<link href="lightbox/css/lightbox.min.css" rel="stylesheet" type="text/css">
+
+<link href="layout.css" rel="stylesheet" type="text/css">
+<script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+
+ <script type="text/javascript">
+            
+            
+            function goTo(x){
+                var image = document.getElementById('img');
+                image.src = "img/img" + x + ".jpg";
+                circleFunc(x);
+            }
+            
+            var imagecounter = 1;
+            var total = 5;
+            
+            function slide(x){
+                if (x == undefined) {
+                    x = 1;
+                }
+                var image = document.getElementById('img');
+                imagecounter = imagecounter+x;
+                if (imagecounter > total) {
+                    imagecounter = 1;
+                }else if (imagecounter < 1) {
+                    imagecounter = total;
+                }
+                image.src = "img/img" + imagecounter + ".jpg";
+                circleFunc(imagecounter);
+            }
+            timerid = setInterval(slide, 2000);
+            
+             function circleFunc(imagecounter){
+			    var buttons = document.getElementById('buttons');
+                buttons.innerHTML = "";
+                document.getElementById('h4').innerHTML = info[imagecounter - 1][0];
+                document.getElementById('p').innerHTML = info[imagecounter - 1][1];
+                for(i=1; i<=total; i++){
+					var elem = document.createElement("img");
+					elem.setAttribute("onclick", "goTo(" + i + ")");
+                    if (i == imagecounter) {
+                        elem.setAttribute("src", "img/circle1.png");
+                    }else{
+                        elem.setAttribute("src", "img/circle0.png");  
+                    }
+					buttons.appendChild(elem);
+                }
+             }
+        </script>
+</head>
+
+<body>
+
+<div id="wrapper">
+	
+	<div id="header">
+	
+		<div id="logo">
+			<img src="slike/logo.png" width="200" height="200" alt="Nis">
+		</div>
+		
+		<div id="slogan">
+			<p>Visok nivo usluge i kvaliteta</p>
+		</div>
+		
+	</div>
+	
+	
+	
+	<div id="nav">
+	<ul>
+	    
+			<li><a href="index.html"><<<-----BACK</a></li>
+			
+		</ul>
+	</div>
+	
+	<div id="main">
+	<h2>FOTO GALERIJA COFFEE PLAZA</h2>
+	<h3>Distance:150m</h3>
+	<div id="wrap">
+            <div id="container">
+                <img id="shadow" src="img/shadow.png"/>
+                <img id="img" src="img/img1.jpg"/>
+                <div id="left_holder"><img onclick="slide(-1)" id="left" src="img/arrow_left.png"/></div>
+                <div id="right_holder"><img onclick="slide(+1)" id="right" src="img/arrow_right.png"/></div>
+            
+            <div id="buttons">
+               <img src="img/circle1.png" />
+               <img src="img/circle0.png" />
+               <img src="img/circle0.png" />
+               <img src="img/circle0.png" />
+               <img src="img/circle0.png" />
+            </div>
+            <div id="text">
+                <h4 id="h4">Slike</h4>
+               
+            </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            var arrowL = document.getElementById('left');
+            var arrowR = document.getElementById('right');
+            var p = document.getElementById('p');
+            var text = document.getElementById('text');
+            
+            arrowL.style.visibility="hidden";
+            arrowR.style.visibility="hidden";
+            
+            arrowL.addEventListener('mouseover', function(){
+            arrowL.src = "img/arrow_left_h.png";
+            });
+            
+            arrowL.addEventListener('mouseout', function(){
+            arrowL.src = "img/arrow_left.png";
+            })
+            
+            arrowR.addEventListener('mouseover', function(){
+            arrowR.src = "img/arrow_right_h.png";
+            });
+            
+            arrowR.addEventListener('mouseout', function(){
+            arrowR.src = "img/arrow_right.png";
+            })
+            
+            var wrap = document.getElementById("wrap");
+            text.addEventListener('mouseover', function(){
+                p.style.display="block";
+                text.style.height = "auto";
+                text.style.width = "auto";
+                });
+            text.addEventListener('mouseout', function(){
+                p.style.display="none";
+                text.style.height = "50px";
+                text.style.width = "auto";
+                });
+            
+            wrap.addEventListener('mouseover', function(){
+                arrowL.style.visibility="";
+                arrowR.style.visibility="";
+                clearInterval(timerid);
+                })
+            wrap.addEventListener('mouseout', function(){
+                arrowL.style.visibility="hidden";
+                arrowR.style.visibility="hidden";
+                timerid = setInterval(slide, 2000);
+                })
+        </script>
+	    </div>
+	
+	    <div id="sidebar">
+		<div class="block">
+		<h2>Cena kafe</h2>
+		<ul>
+		<li>espreso 120</li> 
+		<li>produzeni 140</li>
+		<li>nes 180</li> 
+		<li>doaca kafa 80</li>
+		</ul>
+	     </div>
+		<div class="block">
+		<h2>Preporuka</h2>
+		<p>Mesto se nalazi la lepoj lokaciji sa velikim prometom gostiju i povoljnim cenama</p>
+	     </div> 
+		 
+	</div>
+		 
+	
+	<div id="footer">
+		<p>COFFEE</p>
+	</div>
+	
+</div>
+
+</body>
+</html>

@@ -1,0 +1,558 @@
+@charset "utf-8";
+
+
+html {
+	background-position: center top;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: #c2c2d6;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', Arial, sans-serif;
+	font-size:14px;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	margin:0.3em 0 0.5em;
+}
+h1 {font-size:32px;}
+h2 {font-size:26px;}
+h3 {font-size:24px;}
+h4 {font-size:22px;}
+h5 {font-size:20px;}
+h6 {font-size:18px;}
+
+a:link, 
+a:visited {
+	color:#7B0709;
+	text-decoration: none;
+}
+a:hover {
+	color:#00ccff;
+	text-decoration: underline;
+}
+a:active {
+	color:#686868;
+}
+
+img {
+	vertical-align: bottom;
+}
+
+
+#wrapper {
+	width: 960px;
+	background-color: #FFFFFF;
+	padding: 15px;
+	margin: 30px auto;
+	border-radius: 6px;
+}
+#header {
+	background-color: #660033;
+	overflow: hidden;
+	padding: 10px;
+	margin-bottom: 15px;
+	color:#FFF;
+}
+#logo {
+	float:left;
+}
+#slogan {
+	float:right;
+	font-style:italic;
+	font-size: 20px;
+}
+#nav {
+	background-color: #660033;
+	height: 40px;
+	margin-bottom: 15px;
+}
+#nav ul {
+	margin:0;
+	padding: 0;
+	list-style: none;
+}
+#nav ul li {
+	float:left;
+	position: relative;
+}
+#nav ul li a {
+	display: block;
+	padding: 10px;
+	height:20px;
+}
+#nav ul li ul {
+	width:120px;
+	background-color: rgba(0,0,0,0.7);
+	position: absolute;
+	top:40px;
+	left:0;
+	display:none; 
+}
+
+#nav ul li:hover ul {
+	display:block;
+}
+
+#nav ul li ul li {
+	float:none;
+}
+
+#nav ul li a:link, 
+#nav ul li a:visited {
+	color:#FFF;
+	text-decoration: none;
+}
+#nav ul li a:hover {
+	background-color: #0080ff;
+}
+#nav ul li a:active {
+	background-color: #999;
+	color:#000;
+}
+
+#main {
+	float:left;
+	width:700px;
+	margin-right: 20px;
+}
+         #wrap {
+               height: 450px;
+               width: 650px;
+               margin: 20px auto;
+               position: relative;
+               }
+            
+         #shadow{
+              width: 690px;
+              position: absolute;
+              left: -20px;
+              bottom: -43px;
+                
+               }
+            
+          #container {
+                height: 450px;
+                width: 650px;
+                margin: 20px auto;
+                position: relative;
+            }
+            #img{
+                height: 450px;
+                width: 650px;
+                position: absolute;
+            }
+            #left_holder{
+                height: 450px;
+                width: 100px;
+                position: absolute;
+                left: 0px;
+                top:0px;
+            }
+            #right_holder{
+                height: 450px;
+                width: 100px;
+                right: 0px;
+                position: absolute;
+                top:0px;
+            }
+            #left{
+                height: 50px;
+                width: 50px;
+                position: absolute;
+                top:40%;
+                left: 5px;
+                cursor: pointer;
+            }
+            #right{
+                height: 50px;
+                width: 50px;
+                position: absolute;
+                top:40%;
+                right: 5px;
+                cursor: pointer;
+            }
+            
+            #buttons {
+                position: absolute;
+                left: 270px;
+                bottom: 10px;
+            }
+            
+            #buttons img {
+                float: left;
+                width: 20px;
+                cursor: pointer;
+            }
+            #text {
+                max-width: 530px;
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                background-color: rgba(232, 243, 221, 0.5);
+                border-radius: 0px 0px 30px 0px;
+                padding: 10px;
+            }
+            #p{
+                display: none;
+            }
+#sidebar {
+	float:left;
+	width:240px;
+}
+#footer {
+	background-color: #660033;
+	clear:both;
+	text-align: center;
+	color:#B3B3B3;
+	padding: 5px;
+}
+
+#footer p {
+	margin: 0;
+}
+
+@media screen and (min-width:1024px) and (max-width:1260px) {
+	#wrapper {
+		width: 968px;
+	}
+	
+	#slogan {
+		width: 968px;
+		text-align: right;
+	}
+	
+	#main {
+		width: 600px;
+	}
+	#wrap {
+               width: 500px;
+               margin: 20px auto;
+               position: relative;
+               }
+            
+         #shadow{
+              width: 120px;
+              position: absolute;
+              left: 10px;
+              bottom: 10px;
+                
+               }
+            
+          #container {
+                height: 400px;
+                width: 500px;
+                margin: 10px auto;
+                position: relative;
+            }
+            #img{
+                height: 400px;
+                width: 500px;
+                position: absolute;
+            }
+            #left_holder{
+                height: 420px;
+                width: 100px;
+                position: absolute;
+                left: 0px;
+                top:0px;
+            }
+            #right_holder{
+                height: 420px;
+                width: 100px;
+                right: 0px;
+                position: absolute;
+                top:0px;
+            }
+            #left{
+                height: 50px;
+                width: 50px;
+                position: absolute;
+                top:40%;
+                left: 5px;
+                cursor: pointer;
+            }
+            #right{
+                height: 50px;
+                width: 50px;
+                position: absolute;
+                top:40%;
+                right: 5px;
+                cursor: pointer;
+            }
+            
+            #buttons {
+                position: absolute;
+                left: 200px;
+                bottom: 10px;
+            }
+            
+            #buttons img {
+                float: left;
+                width: 15px;
+                cursor: pointer;
+            }
+            #text {
+                max-width: 120px;
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                background-color: rgba(232, 243, 221, 0.5);
+                border-radius: 0px 0px 30px 0px;
+                padding: 10px;
+            }
+            #p{
+                display: none;
+            }
+	#sidebar {
+		width: 300px;
+	}
+	
+}
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+	#wrapper {
+		width: 760px;
+	}
+	
+	#logo { 
+	    float: none;
+		text-align: center;
+		border-right: none;
+		border-bottom: 1px solid rgba(255,255,255,0.3);
+		margin-right: 0;
+	}
+	
+	#slogan {
+		float: none;
+		text-align: center;
+	}
+		
+	#nav {
+		float: none;
+		text-align: center;
+	}
+	
+	#nav ul li {
+		float: none;
+		display: inline-block;
+	}
+	
+	#main {
+		padding: 10px;
+		width: 420px;
+	}
+	     #wrap {
+               width: 320px;
+               margin: 20px auto;
+               position: relative;
+               }
+            
+         #shadow{
+              width: 120px;
+              position: absolute;
+              left: 20px;
+              bottom: 43px;
+                
+               }
+            
+          #container {
+                height: 300px;
+                width: 320px;
+                margin: 10px auto;
+                position: relative;
+            }
+            #img{
+                height: 350px;
+                width: 320px;
+                position: absolute;
+            }
+            #left_holder{
+                height: 420px;
+                width: 100px;
+                position: absolute;
+                left: 0px;
+                top:0px;
+            }
+            #right_holder{
+                height: 420px;
+                width: 100px;
+                right: 0px;
+                position: absolute;
+                top:0px;
+            }
+            #left{
+                height: 50px;
+                width: 50px;
+                position: absolute;
+                top:40%;
+                left: 5px;
+                cursor: pointer;
+            }
+            #right{
+                height: 50px;
+                width: 50px;
+                position: absolute;
+                top:40%;
+                right: 5px;
+                cursor: pointer;
+            }
+            
+            #buttons {
+                position: absolute;
+                left: 130px;
+                bottom: 10px;
+            }
+            
+            #buttons img {
+                float: left;
+                width: 15px;
+                cursor: pointer;
+            }
+            #text {
+                max-width: 120px;
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                background-color: rgba(232, 243, 221, 0.5);
+                border-radius: 0px 0px 30px 0px;
+                padding: 10px;
+            }
+            #p{
+                display: none;
+            }
+	
+	#sidebar {
+		padding: 10px;
+		width: 260px;
+	}
+		
+}
+
+@media screen and (max-width:767px) {
+	#wrapper {
+		width: 80%;
+	}
+	
+	#logo { 
+	    float: none;
+		text-align: center;
+		border-right: none;
+		border-bottom: 1px solid rgba(255,255,255,0.3);
+		margin-right: 0;
+	}
+	
+	#slogan {
+		float: none;
+		text-align: center;
+	}
+	
+	#nav {
+		height: 50px;
+	}
+		
+    #nav {
+		float: none;
+		text-align: center;
+		font-size: 18px;
+	}
+	
+	#nav ul li {
+		float: none;
+		display: inline-block;
+	}
+	
+	#main {
+		padding: 10px;
+		width: 240px;
+	}
+	   #wrap {
+               
+               width: 320px;
+               margin: 20px auto;
+               position: relative;
+               }
+            
+         #shadow{
+              width: 50px;
+              position: absolute;
+              left: 20px;
+              bottom: 43px;
+                
+               }
+            
+          #container {
+                height: 250px;
+                width: 200px;
+                margin: 10px auto;
+                position: absolute;
+            }
+            #img{
+                height: 300px;
+                width: 220px;
+                position: absolute;
+            }
+            #left_holder{
+                height: 420px;
+                width: 100px;
+                position: absolute;
+                left: 0px;
+                top:0px;
+            }
+            #right_holder{
+                height: 420px;
+                width: 300px;
+                right: 0px;
+                position: absolute;
+                top:0px;
+            }
+            #left{
+                height: 50px;
+                width: 50px;
+                position: absolute;
+                top:40%;
+                left: 5px;
+                cursor: pointer;
+            }
+            #right{
+                height: 50px;
+                width: 50px;
+                position: absolute;
+                top:40%;
+                right: 5px;
+                cursor: pointer;
+            }
+            
+            #buttons {
+                position: absolute;
+                left: 50px;
+                bottom: 5px;
+            }
+            
+            #buttons img {
+                float: left;
+                width: 15px;
+                cursor: pointer;
+            }
+            #text {
+                max-width: 120px;
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                background-color: rgba(232, 243, 221, 0.5);
+                border-radius: 0px 0px 30px 0px;
+                padding: 10px;
+            }
+            #p{
+                display: none;
+            }
+	#sidebar {
+		padding: 10px;
+		width: 240;
+	}
+}
+	
+	
